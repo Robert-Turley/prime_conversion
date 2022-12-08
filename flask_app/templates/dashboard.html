@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/dashboard_style.css') }}">
+    <title>Dashboard</title>
+</head>
+<body>
+    <!-- <p><a href ="/user/profile">Profile (MMP RELEASE)</a></p> -->
+    <div class="header">
+        <p><a href ="/about">About</a></p>
+        <h1>Welcome {{session['username']}} <br> to Prime Conversion</h1>
+        <p><a href ="/user/logout">Logout</a></p>
+    </div>
+    <div class="container">
+        <form id="conversion_form">
+            <label for="num_calc">Enter a number between 1 and 100...</label>
+            <input type="number" name="num_calc" class="form-control">
+            <input type="submit">
+        </form>
+        <table id="conversion_table">
+            <thead>
+                <tr>
+                    <th>Binary Conversion</th>
+                    <th>Whole Number</th>
+                    <th>Tally Notation</th>
+                </tr>
+            </thead>
+            <tbody id="table_body">
+
+            </tbody>
+        </table>
+    </div>
+    <script src="{{ url_for('static',filename='js/script.js') }}"></script>
+</body>
+</html>

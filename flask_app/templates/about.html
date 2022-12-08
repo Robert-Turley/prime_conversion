@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/about_style.css') }}">
+    <title>About</title>
+</head>
+<body>
+    <div class="header">
+        <p><a href ="/home">Home</a></p>
+        <h1 id="how_it_works">How it Works</h1>
+        <p><a href ="/user/logout">Logout</a></p>
+    </div>
+    <div class="container"> 
+        <div class="intro">
+            <p><a href="https://prime-mechanics.com/" target="_blank">Learn More</a></p>
+            <br><br>
+            <p>Prime conversion relies on a unique method for interpreting Real Numbers by utilizing Pi (3.141...) as the base value of the language.</p>
+            <br>
+            <p>Rather than distinguishing the values Pi and 1 as Irrational/Rational numbers, Prime conversion equates these two values using three arguments:</p><br><br>
+            <p>I == 00</p>
+            <p>II == 0</p>
+            <p>III == 000</p><br>
+            <p>Where I equals Pi and 0 equals Tau (2Pi).  00 (represented as [00) in some cases) also refers to Absolute Zero (0K = -273.15°C).  Prime notation does not rely on the traditional four-quadrant (Cartesian) system.</p>
+            <br><br>
+            <p>These three arguments establish the algorithms below, allowing the user to divide any whole number by two and still get a whole number!</p>
+            <br>
+            <p>If EVEN, (N/2) until reaching 3, 2 or 1</p>
+            <p>If ODD, (N+3)/2 until reaching 3, 2 or 1</p>
+            <br>
+            <p>The final value is I or 0 depending on its step in the binary* conversion process.</p>
+        </div>
+        <br><br>
+        <div class="example">
+            <h3 id="ex_header">EXAMPLE</h3>
+            <br>
+            <table>
+                <thead class="column_headers">
+                    <tr>
+                        <th>Binary Conversion</th>
+                        <th>Whole Number</th>
+                        <th>Tally Notation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>I</td>
+                        <td>25 (Starting value)</td>
+                        <td>IIIIIIIIIIIIIIIIIIIIIIIII</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>14 ((25+3)/2)</td>
+                        <td>00000000000000</td>
+                    </tr>
+                    <tr>
+                        <td>I</td>
+                        <td>7 (14/2)</td>
+                        <td>IIIIIII</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>5 ((7+3)/2)</td>
+                        <td>00000</td>
+                    </tr>
+                    <tr>
+                        <td>I</td>
+                        <td>4 ((5+3)/2)</td>
+                        <td>IIII</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>2 (4/2)</td>
+                        <td>00</td>
+                    </tr>
+                    <tr>
+                        <td>I</td>
+                        <td>1 (2/2)</td>
+                        <td>I</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <p><em>*Binary Conversion does not directly reference the traditional computer language of binary, rather the conversion process from Pi(I) to Tau(0) and vice versa based on the three arguments.</em></p>
+            <br>
+            <p>The same process can be applied to number sequences, like the famous Fibonacci sequence!</p>
+            <p>Doing so provides a (theorized) infinitely recurring 8-loop:<br>
+            I I 0 III 0 0 I III</p>
+            <br>
+            <img src="https://prime-mechanics.com/wp-content/uploads/2021/06/Fib.png" alt="Fibonacci Conversion">
+
+            <p>An additional notation was developed in order to visualize the conversion process with Real Numbers.  Below is a sampling of numbers 1-30 using this notation (currently unnamed):</p>
+            <br>
+            <p>
+                [30)[15)[9)[6)[3)(3]<br>
+                [29)[16)[8)[4)[2)(0]<br>
+                [28)[14)[7)[5)[4)[0)(1]<br>
+                [27)[15)[9)[6)[3)(3]<br>
+                [26)[13)[8)[4)[2)(0]<br>
+                [25)[14)[7)[5)[4)[0)(1]<br>
+                [24)[12)[6)[3)(3]<br>
+                [23)[13)[8)[4)[2)(0]<br>
+                [22)[11)[7)[5)[4)[0)(1]<br>
+                [21)[12)[6)[3)(3]<br>
+                [20)[10)[5)[4)[2)(0]<br>
+                [19)[11)[7)[5)[4)[0)(1]<br>
+                [18)[9)[6)[3)(3]<br>
+                [17)[10)[5)[4)[2)(0]<br>
+                [16)[8)[4)[0)(1]<br>
+                [15)[9)[6)[3)(3]<br>
+                [14)[7)[5)[4)[2)(0]<br>
+                [13)[8)[4)[0)(1]<br>
+                [12)[6)[3)(3]<br>
+                [11)[7)[5)[4)[2)(0]<br>
+                [10)[5)[4)[0)(1]<br>
+                [9)[6)[3)(3]<br>
+                [8)[4)[2)(0]<br>
+                [7)[5)[4)[0)(1]<br>
+                [6)[3)(3]<br>
+                [5)[4)[2)(0]<br>
+                [4)[0)(1]<br>
+                [0)(1]<br>
+                [1)(1]<br>
+                [0)(0]<br>
+            </p>
+            <!-- <table>
+                <thead class="column_headers">
+                    <tr>
+                        <th>Binary Conversion</th>
+                        <th>Whole Number</th>
+                        <th>Tally Notation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>I</td>
+                        <td>46368 (24th Fibonacci value))</td>
+                        <td>I...</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>14 ((25+3)/2)</td>
+                        <td>0...</td>
+                    </tr>
+                    <tr>
+                        <td>I</td>
+                        <td>7 (14/2)</td>
+                        <td>I...</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>5 ((7+3)/2)</td>
+                        <td>00000</td>
+                    </tr>
+                    <tr>
+                        <td>I</td>
+                        <td>4 ((5+3)/2)</td>
+                        <td>IIII</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>2 (4/2)</td>
+                        <td>00</td>
+                    </tr>
+                    <tr>
+                        <td>I</td>
+                        <td>1 (2/1)</td>
+                        <td>I</td>
+                    </tr>
+                </tbody>
+            </table> -->
+        </div>
+    </div>
+</body>
+</html>
