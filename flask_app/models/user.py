@@ -3,6 +3,7 @@ from flask import flash
 from flask_app import EMAIL_REGEX, DATABASE
 
 class User:
+    all_users = []
     def __init__(self,data):
         self.id = data['id']
         self.username = data['username']
@@ -10,6 +11,7 @@ class User:
         self.password = data['password']
         self.created_at = data['created_at']
         self.updated_at = data['updated_at']
+        User.all_users.append(self)
 
     @staticmethod
     def validate_user(data):
